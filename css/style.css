@@ -73,17 +73,15 @@ body {
 /* Грид мэшапов */
 .mashups-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* Фиксированное число колонок */
   gap: 24px;
   justify-items: center;
   align-items: center;
   padding-bottom: 60px;
   animation: fadeInUp 0.6s ease-in-out;
-  /* Добавьте это для центрирования всей сетки: */
-  justify-content: center;
-  width: fit-content;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 3rem
+  margin-top: 1.2rem;
 }
 
 /* Карточка мэшапа */
