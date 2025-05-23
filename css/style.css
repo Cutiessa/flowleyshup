@@ -50,6 +50,9 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -70,21 +73,29 @@ body {
   animation: fadeInUp 0.4s ease-in forwards;
 }
 
-/* Грид мэшапов */
 .mashups-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(280px, 1fr)); /* Фиксированное число колонок */
-  gap: 24px;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  gap: 1em;
   justify-items: center;
-  align-items: center;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   animation: fadeInUp 0.6s ease-in-out;
-  width: 100%;
-  margin: 0 auto;
   margin-top: 1.2rem;
 }
 
-/* Карточка мэшапа */
+@media (max-width: 650px) {
+  .mashups-grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .mashups-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .mashup-card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
@@ -162,7 +173,6 @@ body {
   transform: translateY(3px);
 }
 
-/* Футер */
 .footer {
   position: fixed;
   bottom: 0;
@@ -205,7 +215,6 @@ body {
   opacity: 1;
 }
 
-/* Анимации */
 @keyframes fadeInDown {
   from {
     opacity: 0;
